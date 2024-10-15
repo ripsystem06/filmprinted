@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FILES REPORT</title>
+    <link rel="stylesheet"   
+ href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">   
+
+        <h1>FILES WORKED</h1>
+        <div class="upload-section">
+            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
+            <button id="uploadButton">Seleccionar Imagen</button>
+            <button id="printButton">Imprimir Catálogo</button>
+        </div>
+        <table id="productTable">
+            <thead>
+                <tr>
+                    <th>IMAGEN</th>
+                    <th>FECHA</th>
+                    <th>NOMBRE</th>
+                    <th>MARCA</th>
+                    <th>FRONT</th>
+                    <th>BACK</th>
+                    <th>SLEEVE</th>
+                    <th>NECK LABEL</th>
+                    <th>PPO / WO</th>
+                    <th>FIRMA</th>
+                </tr>
+            </thead>
+            <tbody id="productList"></tbody>
+        </table>
+    </div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
