@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         "QuickSilver",
         "RVCA",
         "CapitanFinn"
+        "Madengine"
     ];
 
     uploadButton.addEventListener('click', () => {
