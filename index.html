@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FILES REPORT</title>
-    <link rel="stylesheet"   
- href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
 </head>
 <body>
-    <div class="container">   
-
+    <div class="container">   
         <h1>FILES WORKED</h1>
         <div class="upload-section">
-            <input type="file" id="imageUpload" accept="image/*" style="display: none;">
-            <button id="uploadButton">Seleccionar Imagen</button>
+            <input type="file" id="fileUpload" accept="image/*,application/pdf" style="display: none;">
+            <button id="uploadButton">Seleccionar Archivo</button>
             <button id="printButton">Imprimir Catálogo</button>
         </div>
         <table id="productTable">
             <thead>
                 <tr>
-                    <th>IMAGEN</th>
+                    <th>ARCHIVO</th>
                     <th>FECHA</th>
                     <th>NOMBRE</th>
                     <th>MARCA</th>
@@ -29,7 +28,7 @@
                     <th>SLEEVE</th>
                     <th>NECK LABEL</th>
                     <th>PPO / WO</th>
-                    <th>FIRMA</th>
+                    <th>ESTADO</th>
                 </tr>
             </thead>
             <tbody id="productList"></tbody>
@@ -37,8 +36,22 @@
     </div>
     <div id="imageModal" class="modal">
         <span class="close">&times;</span>
-        <img class="modal-content" id="modalImage">
+        <div id="modalContent" class="modal-content"></div>
     </div>
+    <footer class="print-footer">
+        <p><strong>ATENCIÓN</strong></p>
+        <p>Revisa que los artes entregados sean los indicados en este formato y estén correctos. Evitemos tener problemas en el proceso de producción.</p>
+        <div class="signatures">
+            <div class="signature-line">
+                <p>Firma depto. de Producción de recibido</p>
+                <hr>
+            </div>
+            <div class="signature-line">
+                <p>Firma depto. de Coordinación de Producción de entregado</p>
+                <hr>
+            </div>
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
